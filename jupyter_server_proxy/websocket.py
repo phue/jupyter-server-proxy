@@ -50,7 +50,7 @@ def pingable_ws_connect(
         on_message_callback=on_message_callback,
         on_ping_callback=on_ping_callback,
         max_message_size=getattr(
-            websocket, "_default_max_message_size", 10 * 1024 * 1024
+            websocket, "max_message_size", 10 * 1024 * 1024
         ),
         subprotocols=subprotocols,
         **kwargs,
